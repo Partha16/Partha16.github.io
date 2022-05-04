@@ -7,11 +7,14 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
+
+    dataLayer.push({ 'searchTerm': sessionStorage.getItem("first") });
+
     gtag('js', new Date());
 
     gtag('config', 'UA-227885073-1');
     var k = sessionStorage.getItem("first");
-    dataLayer.push({ 'searchTerm': sessionStorage.getItem("first") });
+
   </script>
 
   <!-- Google Tag Manager -->
