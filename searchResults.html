@@ -10,8 +10,8 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-227885073-1');
-
-    dataLayer.push({ 'searchTerm': sessionStorage.getItem("first") })
+    var k = sessionStorage.getItem("first");
+    dataLayer.push({ 'searchTerm': K })
   </script>
 
   <!-- Google Tag Manager -->
@@ -29,7 +29,7 @@
 </head>
 
 <script>
-  var k = sessionStorage.getItem("first");
+
   //document.getElementById("name").innerHTML = k;
   //document.write(k);
 
