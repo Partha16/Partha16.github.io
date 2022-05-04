@@ -1,0 +1,40 @@
+<body>
+  <h1 style='font-family: Arial, Helvetica, sans-serif; text-align: center'>Search for the stuff you want</h1>
+  <form id="form" onsubmit='return false;'>
+    <input type="text" id="userInput" />
+    <input type="submit" onclick="store()" />
+  </form>
+</body>
+<script>
+  function store() {
+    var input = document.getElementById("userInput").value;
+    alert(input);
+
+    // (A) VARIABLES TO PASS
+    var first = input,
+      second = ["Hello", "World"];
+
+    // (B) SAVE TO SESSION STORAGE
+    // (B1) FLAT STRING OR NUMBER
+    // SESSIONSTORAGE.SETITEM("KEY", "VALUE");
+    sessionStorage.setItem("first", first);
+
+    // (B2) ARRAY OR OBJECT
+    // SESSION STORAGE CANNOT STORE ARRAY AND OBJECTS
+    // JSON ENCODE BEFORE STORING, CONVERT TO STRING
+    sessionStorage.setItem("second", JSON.stringify(second));
+
+    // (C) REDIRECT
+    location.href = "1b-session.html";
+    // window.open("1b-session.html");
+  }
+</script>
+
+
+
+<style>
+  body {
+    background-image: url("paper.gif");
+    background-color: #cccccc;
+  }
+</style>
